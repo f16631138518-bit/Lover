@@ -1,0 +1,1024 @@
+/* =========================
+   冯成锦 ❤ 方星懿 一周年纪念
+   Premium Love Website CSS
+========================= */
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    background:#050505;
+    color:white;
+
+    font-family:
+    "SF Pro Display",
+    "PingFang SC",
+    "Microsoft YaHei",
+    sans-serif;
+
+    overflow-x:hidden;
+
+}
+
+
+
+
+
+/* =========================
+   音乐按钮
+========================= */
+
+
+.music-control{
+
+    position:fixed;
+
+    right:35px;
+    bottom:35px;
+
+    width:55px;
+    height:55px;
+
+    border-radius:50%;
+
+    background:
+    rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border:
+    1px solid rgba(255,255,255,.2);
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    font-size:25px;
+
+    cursor:pointer;
+
+    z-index:999;
+
+    transition:.5s;
+
+}
+
+
+.music-control:hover{
+
+    transform:rotate(180deg) scale(1.1);
+
+    box-shadow:
+    0 0 30px rgba(255,215,120,.7);
+
+}
+
+
+
+
+
+
+/* =========================
+   鼠标光点
+========================= */
+
+
+#cursor{
+
+    width:20px;
+    height:20px;
+
+    position:fixed;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    background:
+    rgba(255,215,120,.8);
+
+    filter:blur(8px);
+
+    z-index:9999;
+
+}
+
+
+
+
+
+
+
+/* =========================
+   Hero 开场
+========================= */
+
+
+.hero{
+
+    height:100vh;
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+
+
+.hero-bg{
+
+
+    position:absolute;
+
+    inset:0;
+
+
+    background:
+
+    linear-gradient(
+    rgba(0,0,0,.45),
+    rgba(0,0,0,.75)
+    ),
+
+    url("assets/images/cover.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+
+    animation:
+
+    zoom 18s infinite alternate;
+
+
+}
+
+
+
+@keyframes zoom{
+
+
+from{
+
+transform:scale(1);
+
+}
+
+
+to{
+
+transform:scale(1.15);
+
+}
+
+
+}
+
+
+
+
+
+.hero-content{
+
+    position:relative;
+
+    text-align:center;
+
+    z-index:2;
+
+    animation:
+
+    fadeUp 2s ease;
+
+
+}
+
+
+
+.small-title{
+
+    letter-spacing:8px;
+
+    font-size:14px;
+
+    opacity:.7;
+
+}
+
+
+
+
+
+.hero h1{
+
+
+    font-size:
+
+    clamp(55px,10vw,120px);
+
+
+    font-weight:300;
+
+
+    letter-spacing:12px;
+
+
+    margin:20px;
+
+
+    background:
+
+    linear-gradient(
+    90deg,
+    #fff,
+    #e8c77a,
+    #fff
+    );
+
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+
+}
+
+
+
+.heart{
+
+    font-size:55px;
+
+    color:#e8c77a;
+
+    animation:
+
+    heartbeat 1.5s infinite;
+
+}
+
+
+
+@keyframes heartbeat{
+
+
+50%{
+
+transform:scale(1.25);
+
+}
+
+
+}
+
+
+
+
+
+.year{
+
+    letter-spacing:6px;
+
+    font-size:18px;
+
+}
+
+
+
+.date{
+
+    margin-top:20px;
+
+    opacity:.7;
+
+}
+
+
+
+
+
+.scroll{
+
+
+    margin-top:100px;
+
+    letter-spacing:5px;
+
+    animation:
+
+    float 2s infinite;
+
+}
+
+
+
+
+@keyframes float{
+
+
+50%{
+
+transform:translateY(15px);
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+/* =========================
+   通用区域
+========================= */
+
+
+section{
+
+    min-height:100vh;
+
+    padding:
+
+    120px 8%;
+
+    position:relative;
+
+}
+
+
+
+
+
+h2{
+
+
+    text-align:center;
+
+    font-size:55px;
+
+    font-weight:300;
+
+    letter-spacing:8px;
+
+    margin-bottom:80px;
+
+
+}
+
+
+
+
+
+
+/* =========================
+   Intro
+========================= */
+
+
+.intro{
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+}
+
+
+
+.text-box{
+
+
+    max-width:900px;
+
+    text-align:center;
+
+
+    font-size:25px;
+
+    line-height:2.2;
+
+
+}
+
+
+
+.gold{
+
+    color:#e8c77a;
+
+    margin-top:50px;
+
+}
+
+
+
+
+
+
+
+/* =========================
+   时间计算
+========================= */
+
+
+.counter{
+
+
+    background:
+
+    radial-gradient(
+    circle,
+    #181818,
+    #050505
+    );
+
+
+}
+
+
+
+.timer{
+
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+
+
+}
+
+
+
+.timer div{
+
+
+    width:180px;
+
+    height:180px;
+
+
+    border-radius:30px;
+
+
+    background:
+
+    rgba(255,255,255,.05);
+
+
+    backdrop-filter:
+
+    blur(20px);
+
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+
+    border:
+
+    1px solid rgba(255,255,255,.1);
+
+
+}
+
+
+
+.timer span{
+
+
+    font-size:60px;
+
+    color:#e8c77a;
+
+
+}
+
+
+
+.timer p{
+
+    letter-spacing:3px;
+
+}
+
+
+
+
+
+
+
+
+/* =========================
+   照片墙
+========================= */
+
+
+.gallery{
+
+
+    background:#080808;
+
+
+}
+
+
+
+
+.photos{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(260px,1fr));
+
+
+    gap:40px;
+
+
+}
+
+
+
+
+.photo{
+
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+
+    background:#111;
+
+
+    transition:.8s;
+
+
+}
+
+
+
+.photo img{
+
+
+    width:100%;
+
+    height:400px;
+
+
+    object-fit:cover;
+
+
+    transition:1s;
+
+
+}
+
+
+
+.photo p{
+
+
+    padding:25px;
+
+    text-align:center;
+
+    letter-spacing:3px;
+
+
+}
+
+
+
+
+
+.photo:hover{
+
+
+    transform:
+
+    translateY(-20px);
+
+
+    box-shadow:
+
+    0 30px 60px rgba(0,0,0,.8);
+
+
+}
+
+
+
+.photo:hover img{
+
+
+    transform:scale(1.15);
+
+
+}
+
+
+
+
+
+
+/* =========================
+   视频
+========================= */
+
+
+.video-section{
+
+
+    text-align:center;
+
+
+}
+
+
+
+.video-box{
+
+
+    max-width:1000px;
+
+    margin:auto;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+
+    box-shadow:
+
+    0 0 60px rgba(255,215,120,.15);
+
+
+}
+
+
+
+video{
+
+    width:100%;
+
+}
+
+
+
+
+
+
+/* =========================
+   情书
+========================= */
+
+
+.letter-section{
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+
+}
+
+
+
+.envelope{
+
+
+    font-size:100px;
+
+    cursor:pointer;
+
+
+    animation:
+
+    float 2s infinite;
+
+
+}
+
+
+
+.envelope p{
+
+
+    font-size:16px;
+
+}
+
+
+
+.letter{
+
+
+    margin-top:50px;
+
+
+    max-width:700px;
+
+
+    padding:60px;
+
+
+    background:
+
+    rgba(255,255,255,.08);
+
+
+    backdrop-filter:
+
+    blur(20px);
+
+
+
+    border-radius:30px;
+
+
+    line-height:2;
+
+
+    font-size:22px;
+
+
+    display:none;
+
+
+}
+
+
+
+.letter.show{
+
+    display:block;
+
+    animation:
+
+    fadeUp 1s;
+
+}
+
+
+
+
+.sign{
+
+    text-align:right;
+
+    margin-top:40px;
+
+    color:#e8c77a;
+
+}
+
+
+
+
+
+
+/* =========================
+   结尾星空
+========================= */
+
+
+.ending{
+
+
+    text-align:center;
+
+    overflow:hidden;
+
+
+}
+
+
+
+.ending h1{
+
+
+    font-size:
+
+    120px;
+
+
+    font-weight:200;
+
+
+    letter-spacing:20px;
+
+
+    background:
+
+    linear-gradient(
+    90deg,
+    white,
+    #e8c77a
+    );
+
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+
+}
+
+
+
+
+.final-name{
+
+
+    font-size:45px;
+
+    margin-top:50px;
+
+
+}
+
+
+
+.final-name span{
+
+
+    color:#e8c77a;
+
+}
+
+
+
+.infinity{
+
+
+    font-size:100px;
+
+    color:#e8c77a;
+
+}
+
+
+
+
+
+
+
+
+/* =========================
+   烟花
+========================= */
+
+
+#firework{
+
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:100;
+
+
+}
+
+
+
+
+
+
+
+/* =========================
+   动画
+========================= */
+
+
+@keyframes fadeUp{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(80px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:none;
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* =========================
+   手机适配
+========================= */
+
+
+@media(max-width:700px){
+
+
+.hero h1{
+
+    letter-spacing:5px;
+
+}
+
+
+h2{
+
+    font-size:35px;
+
+}
+
+
+.text-box{
+
+    font-size:18px;
+
+}
+
+
+.timer div{
+
+    width:140px;
+
+    height:140px;
+
+}
+
+
+.timer span{
+
+    font-size:45px;
+
+}
+
+
+.ending h1{
+
+    font-size:70px;
+
+}
+
+
+}
